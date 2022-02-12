@@ -421,7 +421,6 @@ function CPI_dialog() {
       if (engine.inputFiles.length == 0) {
          console.writeln("Specify input files.");
       } else {
-         engine.coldPixelInterpolationFiles();
          this.ok();
       }
    }
@@ -577,6 +576,9 @@ function main() {
 
    if (retVal == 1) {
       //perform
+      console.show();
+      console.abortEnabled = true;
+      engine.coldPixelInterpolationFiles();
       console.writeln("CPI script finished");
    } else {
       //cancelled
