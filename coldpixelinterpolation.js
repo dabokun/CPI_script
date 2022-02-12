@@ -416,7 +416,7 @@ function CPI_dialog() {
    this.execButton.width = 40;
    this.execButton.onClick = () => {
       if (engine.inputFiles.length == 0) {
-         Console.writeln("Specify input files.");
+         console.writeln("Specify input files.");
       } else {
          engine.coldPixelInterpolationFiles();
          this.ok();
@@ -574,10 +574,10 @@ function main() {
 
    if (retVal == 1) {
       //perform
-      Console.writeln("CPI script finished");
+      console.writeln("CPI script finished");
    } else {
       //cancelled
-      Console.writeln("Cancelled");
+      console.writeln("Cancelled");
    }
 
 
