@@ -172,6 +172,7 @@ function ColdPixelInterpolationEngine() {
          stackedImage.apply(image, ImageOp_Add);           //and add!
          currentImage.mainView.endProcess();
          currentImage.forceClose();
+         gc();
       }
 
       //Convert to ImageWindow Object
@@ -253,6 +254,7 @@ function ColdPixelInterpolationEngine() {
       coolImage.show();
       stackedImageWin.forceClose();
       stackedCCImageWin.forceClose();
+      gc();
 
       //Apply Cool File to original light frames
       var directory = null;
@@ -275,6 +277,7 @@ function ColdPixelInterpolationEngine() {
          var outPath = directory + "/" + fileName;
          this.writeImage(currentImage, outPath);
          currentImage.forceClose();
+         gc();
       }
 
    }
